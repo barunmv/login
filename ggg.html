@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Page</title>
+    <!-- Memuat Font Awesome untuk ikon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Untuk menggunakan gambar dinding bata biru, ganti komentar di bawah ini dengan URL gambar yang kamu inginkan */
+        /* background: url('brick-wall.jpg') no-repeat center center fixed; */
+        background-color: lch(59.77% 59.34 276.89);
+        background-size: cover;
+        font-family: Arial, sans-serif;
+      }
+      .login-container {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 40px 20px 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        width: 300px;
+        text-align: center;
+        overflow: hidden;
+      }
+      /* Efek cahaya di atas form */
+      .login-container::before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150%;
+        height: 60px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        border-radius: 50%;
+      }
+      .login-container h1 {
+        color: #fff;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
+      }
+      .input-container {
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+      }
+      .input-container i {
+        color: #fff;
+        margin-right: 10px;
+      }
+      .input-container input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        outline: none;
+        color: #fff;
+        font-size: 16px;
+      }
+      .remember-forgot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+      .remember-forgot label {
+        cursor: pointer;
+      }
+      .remember-forgot input[type="checkbox"] {
+        margin-right: 5px;
+      }
+      .remember-forgot a {
+        color: #f4f407;
+        text-decoration: none;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #f31b08;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #098de6;
+      }
+      .register {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #f5f1f1;
+      }
+      .register a {
+        color: #060201;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Login</h1>
+      <!-- Field Username dengan ikon -->
+      <div class="input-container">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" />
+      </div>
+      <!-- Field Password dengan ikon -->
+      <div class="input-container">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" />
+      </div>
+      <div class="remember-forgot">
+        <div class="remember">
+          <input type="checkbox" id="remember" />
+          <label for="remember">Remember me</label>
+        </div>
+        <div class="forgot">
+          <a href="#">Forgot password?</a>
+        </div>
+      </div>
+      <button>Login</button>
+      <div class="register">
+        Don't have an account? <a href="#">Register</a>
+      </div>
+    </div>
+  </body>
+</html>
