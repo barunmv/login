@@ -1,0 +1,8 @@
+.eslintrc.json
+*.db
+.next/
+node_modules/
+.env.*
+!.env.example
+*.log
+.vercel/
